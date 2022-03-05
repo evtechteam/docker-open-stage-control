@@ -11,12 +11,11 @@ RUN apk update && \
     cd /tmp && \
     unzip /tmp/open-stage-control.zip && \
     mv /tmp/open-stage-control-${OSC_VERSION#v}-node /app && \
+    mkdir /root/.config/open-stage-control && \
     apk del curl unzip
-
-#ADD entrypoint.sh .
 
 WORKDIR /app
 
 EXPOSE 8080
 
-ENTRYPOINT ["npm", "run", "start-node", "-n"]
+ENTRYPOINT ["npm", "run", "start-node", "--", "-n"]
