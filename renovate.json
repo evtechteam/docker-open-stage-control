@@ -1,0 +1,26 @@
+{
+    "extends": [
+        "config:base"
+    ],
+    "dependencyDashboard": true,
+    "prHourlyLimit": 10,
+    "semanticCommits": "enabled",
+    "semanticCommitType": "fix",
+    "requiredStatusChecks": null,
+    "regexManagers": [
+        {
+            "fileMatch": [
+                "^Dockerfile$"
+            ],
+            "matchStrings": [
+                "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sARG .*?_VERSION=(?<currentValue>.*)\\s"
+            ],
+            "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+        }
+    ],
+    "packageRules": [
+        {
+            "automerge": true
+        }
+    ]
+}
