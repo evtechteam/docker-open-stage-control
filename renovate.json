@@ -20,7 +20,7 @@
     ],
     "packageRules": [
         {
-            "matchDepTypes": ["*"],
+            "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
             "automerge": true
         }
     ]
