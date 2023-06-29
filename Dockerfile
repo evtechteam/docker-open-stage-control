@@ -1,7 +1,7 @@
 FROM node:17.6.0-alpine3.15
 
 # renovate: datasource=github-releases depName=jean-emmanuel/open-stage-control
-ARG OSC_VERSION=v0.23.1
+ARG OSC_VERSION=v0.49.12
 
 ##https://github.com/jean-emmanuel/open-stage-control/releases/download/v1.15.4/open-stage-control-1.15.4-node.zip
 RUN apk update && \
