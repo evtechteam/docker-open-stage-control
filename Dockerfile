@@ -11,7 +11,7 @@ RUN apk update && \
     cd /tmp && \
     unzip /tmp/open-stage-control.zip && \
     #mv /tmp/open-stage-control-${OSC_VERSION#v}-node /app && \
-    mv /tmp/open-stage-control-${OSC_VERSION#v}-linux-x64/resources/app /app && \
+    mv /tmp/open-stage-control_${OSC_VERSION#v}_linux-x64/resources/app /app && \
     rm -rf /tmp/open-stage-control* && \
     mkdir -p /root/.config/open-stage-control && \
     apk del curl unzip
