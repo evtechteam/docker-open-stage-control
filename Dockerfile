@@ -7,7 +7,7 @@ ARG OSC_VERSION=v1.25.1
 RUN apk update && \
     apk add --no-cache --upgrade curl unzip && \
     #curl -o /tmp/open-stage-control.zip -L https://github.com/jean-emmanuel/open-stage-control/releases/download/${OSC_VERSION}/open-stage-control-${OSC_VERSION#v}-node.zip && \
-    curl -o /tmp/open-stage-control.zip -L https://github.com/jean-emmanuel/open-stage-control/releases/download/${OSC_VERSION}/open-stage-control-${OSC_VERSION#v}-linux-x64.zip && \
+    curl -o /tmp/open-stage-control.zip -L https://github.com/jean-emmanuel/open-stage-control/releases/download/${OSC_VERSION}/open-stage-control_${OSC_VERSION#v}_linux-x64.zip && \
     cd /tmp && \
     unzip /tmp/open-stage-control.zip && \
     #mv /tmp/open-stage-control-${OSC_VERSION#v}-node /app && \
