@@ -1,4 +1,4 @@
-FROM node:17.9.1-alpine3.15
+FROM node:19.2.0-alpine3.15
 
 # renovate: datasource=github-releases depName=jean-emmanuel/open-stage-control
 ARG OSC_VERSION=v0.49.12
